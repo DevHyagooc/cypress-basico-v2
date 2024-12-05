@@ -1,7 +1,6 @@
 name: Testes end-to-end 🧪
 on: [push]
-jobs:
-  npm-run-test:
+jobs: npm run test:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout

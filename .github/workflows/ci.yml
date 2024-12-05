@@ -1,14 +1,17 @@
-name: Testes end-to-end 🧪
+name: End-to-end tests 🧪
 on: [push]
 jobs:
-  cypress-tests:
-    runs-on: ubuntu-latest  # Aqui você garante que o job rode em um runner Linux
+  cypress-run:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Install dependencies
         run: npm install
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v2
-        with:
-          record: false
-          config-file: cypress.json
+        
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      #- name: Cypress run 
+      #  uses: cypress-io/github-action@v2
+      

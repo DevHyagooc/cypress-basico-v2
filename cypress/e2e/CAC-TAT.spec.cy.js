@@ -1,6 +1,5 @@
 describe('Central de Atendimento ao Cliente TAT', () => {
   beforeEach(() => {
-    cy.viewport(410, 860)
     cy.visit('./src/index.html')
   })
 
